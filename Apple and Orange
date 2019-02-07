@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    int s;
+    int t;
+    int a;
+    int b;
+    int m;
+    int n;
+    cin>>s>>t;
+    cin>>a>>b;
+    cin>>m>>n;
+    //cout<<s<<t<<a<<b<<m<<n<<"\n";
+    int apple[m];
+    int apple1[m];
+    int orange[n];
+    int orange1[n];
+    int i;
+    int applecount = 0;
+    int orangecount = 0;
+    //cout<<"apple";
+    for(i=0;i<m;i++){
+        cin>>apple[i];
+        apple1[i] = a + apple[i];
+        if(apple1[i]>=s && apple1[i]<=t){
+            applecount++;
+        }
+      //  cout<<apple1[i]<<" ";
+    }
+   // cout<<"\n"<<"orange";
+    for(i=0;i<n;i++){
+        cin>>orange[i];
+        orange1[i] = b + orange[i];
+        if(orange1[i]>=s && orange1[i]<=t){
+            orangecount++;
+        }
+     //   cout<<orange1[i]<<" ";
+    }
+    cout<<applecount;
+    cout<<"\n";
+    cout<<orangecount;
+    return 0;
+}
