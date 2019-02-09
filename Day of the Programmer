@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+/*
+    * Prosen Ghosh
+    * American International University - Bangladesh (AIUB)
+    *
+*/
+int main() {
+    int year,sum = 41;
+    cin >> year;
+    if(year == 1918)sum -= 15;
+    else  if(year > 1918)sum -= ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)? 29 : 28;
+    else sum -= (year % 4 != 0) ? 28 : 29;
+    cout << sum << ".09." << year << endl;
+    return 0;
+}
