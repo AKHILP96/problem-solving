@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    int n;
+    int i;
+    long long int a[130000];
+    int max = 0;
+    int maxelement = 0;
+    cin>>n;
+
+    for(i=0;i<n;i++){
+        cin>>a[i];
+        a[i]=a[i]-1;
+    }
+    long long int b[130000];
+    for(i=0;i<n;i++)
+    {
+        b[n]=0;
+    }
+
+    for(i=0;i<n;i++){
+        b[a[i]]++;
+    }
+ //   for(i=0;i<n;i++){
+  //      cout<< i + 1 << " " << b[i]<<"\n";
+ //   }
+    for(i=0;i<n;i++){
+      //  cout<<b[i];
+      if(b[i]>max){
+          max = b[i];
+        //  cout<<max;
+        //  cout<<max<<" ";
+        //  cout<<b[i]<<" ";
+          maxelement = i+1;
+      }
+
+    }
+    cout<<maxelement;
+    return 0;
+}
