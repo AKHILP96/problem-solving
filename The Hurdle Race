@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    int n;
+    int k;
+    int h[100];
+    int max = 0;
+    cin>>n;
+    cin>>k;
+    int temp;
+    for(int i=0;i<n;i++)
+    {   cin>>temp;
+        if(temp>max){
+            max = temp;
+         //   cout<<temp;
+        }
+    }
+   // cout<<max;
+    if(max - k > 0){
+        cout<<max - k;
+    }else{
+        cout<<0;
+    }
+    return 0;
+}
