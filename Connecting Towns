@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+vector<string> split_string(string);
+
+int main(){
+    int n;
+    cin>>n;
+    int i;
+    for(i=0;i<n;i++){
+        int j,m;
+        cin>>m;
+        int temp;
+        int result = 1;
+        for(j=0;j<m-1;j++){
+            cin>>temp;
+           // cout<<result<<" ";
+            result = (result * temp)%1234567;
+        }
+        cout<<result%1234567<<endl; 
+    }
+
+    return 0;
+}
