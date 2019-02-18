@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    int i;
+    int a[100];
+    for(i=0;i<n;i++)
+    {
+        int px;
+        int qx;
+        int py;
+        int qy;
+        cin>>px;
+        cin>>py;
+        cin>>qx;
+        cin>>qy;
+        int x = qx-px;
+        int y = qy-py;
+        int rx = qx + x;
+        int ry = qy + y;
+        cout<<rx<<" "<<ry<<endl;
+    }
+    return 0;
+}
