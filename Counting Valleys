@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Complete the countingValleys function below.
+int main(){
+    int i;
+    int n;
+    int level = 0;
+    int countValley = 0;
+    cin>>n;
+    char valley[10000000];
+    cin>>valley;
+    for(i=0;i<n;i++){
+        if(valley[i] == 'U'){
+            level++;
+        }else if(valley[i] == 'D'){
+            if(level == 0){
+                level--;
+                countValley++;
+            }else{
+                level--;
+            }
+        }
+    }
+    cout<<countValley;
+}
