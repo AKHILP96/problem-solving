@@ -1,0 +1,42 @@
+function rot13(str) { // LBH QVQ VG!
+  let newArr = str.split(" ");
+  let final = "";
+  //console.log(newArr);
+  for(let i = 0; i <newArr.length;i++){
+      let tempArr = newArr[i].split('');
+      console.log(tempArr);
+      newArr[i] = convert(tempArr);
+  }
+  function convert(arr){
+      let tempNum = 0;
+      let returnStr = "";
+    //  console.log(arr.length);
+      for(let i=0;i<arr.length;i++){
+         tempNum = arr[i].charCodeAt(0);
+         if(tempNum>=65 && tempNum<=90){
+         let temp = tempNum-13;
+         if(temp<65){
+             temp = tempNum - 65+1;
+             //console.log(temp);
+             temp = 13 - temp;
+             temp = 90 - temp;
+            // console.log(temp);
+             tempNum = temp;
+         }else{
+             tempNum = tempNum - 13;
+         }
+       //   console.log(tempNum);
+      }
+       returnStr += String.fromCharCode(tempNum);
+         console.log(returnStr);
+    }
+      return returnStr;
+  }
+  newArr = newArr.join(" ");
+
+  return newArr;
+
+}
+
+// Change the inputs below to test
+rot13("SERR CVMMN!");
